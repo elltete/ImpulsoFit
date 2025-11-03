@@ -13,6 +13,11 @@ class Usuario:
     __genero = None
     __altura_cm = None
     __peso_kg = None
+    __perfil = None
+    __rutina = []
+    __lesion = []
+    __equipamiento_propio = []
+    __objetivo = []
 
     def __init__(self, nombre, email, telefono, username, password, fecha_nacimiento, genero, altura_cm, peso_kg):
         raise RuntimeError
@@ -44,6 +49,11 @@ class Usuario:
         nuevo_usuario.__genero = genero
         nuevo_usuario.__altura_cm = altura_cm
         nuevo_usuario.__peso_kg = peso_kg
+        nuevo_usuario.__perfil = None
+        nuevo_usuario.__rutina = []
+        nuevo_usuario.__lesion = []
+        nuevo_usuario.__equipamiento_propio = []
+        nuevo_usuario.__objetivo = []
         return nuevo_usuario
 
 #Setters
@@ -62,7 +72,7 @@ class Usuario:
     def set_username(self, username):
         self.__username = username
 
-    def set_password(self, password):
+    def __set_password(self, password):
         self.__password = password
 
     def set_fecha_nacimiento(self, fecha_nacimiento):
@@ -76,6 +86,21 @@ class Usuario:
 
     def set_peso_kg(self, peso_kg):
         self.__peso_kg = peso_kg
+    
+    def set_perfil(self, perfil):
+        self.__perfil = perfil
+        
+    def set_rutina(self, rutina):
+        self.__rutina.append(rutina)
+        
+    def set_lesion(self, lesion):
+        self.__lesion.append(lesion)
+        
+    def set_equipamiento_propio(self, equipamiento_propio):
+        self.__equipamiento_propio.append(equipamiento_propio)
+        
+    def set_objetivo(self, objetivo):
+        self.__objetivo.append(objetivo)
 
 #Getters
     def get_estado(self):
@@ -111,6 +136,21 @@ class Usuario:
     def get_peso_kg(self):
         return self.__peso_kg
     
+    def get_perfil(self):
+        return self.__perfil
+    
+    def get_rutina(self):
+        return self.__rutina
+    
+    def get_lesion(self):
+        return self.__lesion
+    
+    def get_objetivo(self):
+        return self.__objetivo
+    
+    def get_equipamiento_propio(self):
+        return self.__equipamiento_propio
+    
 #Metodos
 
     def cambiar_estado(self):
@@ -145,6 +185,20 @@ class Usuario:
             return print('Acceso validado')
         else:
             return print('Acceso denegado')
+        
+    def asignar_perfil(self, perfil):
+        self.set_perfil(perfil)
+        
+    def asignar_rutina(self, rutina):
+        self.set_rutina(rutina)
+        
+    def asignar_lesion(self, lesion):
+        self.set_lesion(lesion)
+        
+    def asignar_objetivo(self, objetivo):
+        self.set_objetivo(objetivo)
     
+    def asignar_equipamiento_propio(self, equipamiento_propio):
+        self.set_equipamiento_propio(equipamiento_propio)
     
     
