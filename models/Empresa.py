@@ -10,3 +10,6 @@ class Empresa:
     def get_usuarios(self):
         return self.__usuarios
     
+    def cantidad_usuarios_registrados(self):
+        return len(self.__usuarios)
+    

@@ -33,3 +33,14 @@ Funcionalidades de un sistema sobre rutinas personalizadas de entrenamiento:
 
 7.  A medida que el usuario realiza el/los EJERCICIOS proporcionados en la RUTINA, el sistema generar un AVANCE del OBJETIVO.
 
+
+Las funcionalidades implementadas son:
+
+1- Registración - registrar():
+Al registrarse un nuevo usuario, deberá ingresar su nombre, email, teléfono, nombre de usuario, contraseña, fecha de nacimiento, género, su altura y peso. 
+Luego deberá generar su perfil, donde debe indicar cuantos dias disponibles en la semana tiene para entrenar, su frecuencia semanal, horas disponible para el entrenamiento, lugar de entrenamiento, su estilo de vida, que tipo de ejercicio le interesa realizar, si realiza alguna actividad física, y su experiencia en entrenamiento.
+Deberá también indicar su objetivo de entrenamiento, detallando su meta, tiempo estimado de entrenamiento por semana, fecha de inicio del objetivo, y una descripción.
+Debe indicar si tiene lesiones, para ello debe indicar qué tipo de lesión tiene, la zona del cuerpo afectada, el grado de la lesión y una observación.
+Y por último, deberá indicar qué equipamiento posee.
+
+2- 

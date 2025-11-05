@@ -16,24 +16,11 @@ class Usuario:
     __perfil = None
     __rutina = []
     __lesion = []
-    __equipamiento_propio = []
+    __equipamiento = []
     __objetivo = []
 
     def __init__(self, nombre, email, telefono, username, password, fecha_nacimiento, genero, altura_cm, peso_kg):
         raise RuntimeError
-        '''
-        self.__estado = True
-        self.__nombre = nombre
-        self.__email = email
-        self.__telefono = telefono
-        self.__username = username
-        self.__password = password
-        self.__fecha_nacimiento = fecha_nacimiento
-        self.__fecha_registro = date.today()
-        self.__genero = genero
-        self.__altura_cm = altura_cm
-        self.__peso_kg = peso_kg
-        '''
     
     @classmethod    
     def registrar(cls, nombre, email, telefono, username, password, fecha_nacimiento, genero, altura_cm, peso_kg):
@@ -52,7 +39,7 @@ class Usuario:
         nuevo_usuario.__perfil = None
         nuevo_usuario.__rutina = []
         nuevo_usuario.__lesion = []
-        nuevo_usuario.__equipamiento_propio = []
+        nuevo_usuario.__equipamiento = []
         nuevo_usuario.__objetivo = []
         return nuevo_usuario
 
@@ -96,8 +83,8 @@ class Usuario:
     def set_lesion(self, lesion):
         self.__lesion.append(lesion)
         
-    def set_equipamiento_propio(self, equipamiento_propio):
-        self.__equipamiento_propio.append(equipamiento_propio)
+    def set_equipamiento(self, equipamiento):
+        self.__equipamiento.append(equipamiento)
         
     def set_objetivo(self, objetivo):
         self.__objetivo.append(objetivo)
@@ -148,8 +135,8 @@ class Usuario:
     def get_objetivo(self):
         return self.__objetivo
     
-    def get_equipamiento_propio(self):
-        return self.__equipamiento_propio
+    def get_equipamiento(self):
+        return self.__equipamiento
     
 #Metodos
 
@@ -171,8 +158,11 @@ class Usuario:
                 genero = {self.get_genero().name}
                 altura en cm = {self.get_altura_cm()}
                 peso en kg = {self.get_peso_kg()}
+                perfil = {self.get_perfil}
+                lesion = {self.get_lesion}
+                equipamiento = {self.get_equipamiento}
+                objetivo = {self.get_objetivo}
                      ''')
-    
     
     def __autenticar_username(self, username):
         return (self.get_username() == username)
@@ -198,7 +188,7 @@ class Usuario:
     def asignar_objetivo(self, objetivo):
         self.set_objetivo(objetivo)
     
-    def asignar_equipamiento_propio(self, equipamiento_propio):
-        self.set_equipamiento_propio(equipamiento_propio)
+    def asignar_equipamiento(self, equipamiento):
+        self.set_equipamiento(equipamiento)
     
     

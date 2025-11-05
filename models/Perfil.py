@@ -35,3 +35,18 @@ class Perfil:
     
     def get_experiencia(self):
         return self.__experiencia
+    
+    def print_perfil(self):
+        return(
+            f'''
+                dias_disponibles = {self.__dias_disponibles}
+                frecuencia_semanal = {self.__frecuencia_semanal}
+                horas_disponibles = {self.__horas_disponibles}
+                lugar_entrenamiento = {self.__lugar_entrenamiento.name}
+                estilo_vida = {self.__estilo_vida.name}
+                tipo_de_interes = {self.__tipo_de_interes.name}
+                actividad_actual = {self.__actividad_actual}
+                experiencia = {self.__experiencia.name}
+            '''
+        )
+ 
